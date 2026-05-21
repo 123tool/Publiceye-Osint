@@ -1,4 +1,4 @@
-## PublicEye v3.0 - Open Source Intelligence (OSINT) Platform
+## PublicEye - OSINT Platform
 
 ---
 

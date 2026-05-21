@@ -33,19 +33,69 @@ Platform ini hadir dengan antarmuka bertema *Cyber-Dark Glassmorphism* yang intu
 ---
 
 ## Instalasi & Penggunaan
-### 📱 1. Via Termux (Android)
-Untuk menjalankan PublicEye langsung dari ponsel Android Anda, pastikan Anda sudah memasang aplikasi Termux dari F-Droid, lalu jalankan perintah berikut:
+## 1. Termux (Android)
+Untuk menjalankan PublicEye langsung dari ponsel Android Anda, pastikan Anda sudah memasang aplikasi Termux dari F-Droid, lalu jalankan perintah berikut :
 
-```bash
-# Perbarui paket repositori Termux
+1. Perbarui paket repositori Termux
+```
 pkg update && pkg upgrade -y
-
-# Pasang git dan python (atau nodejs)
+```
+2. Pasang git dan python (atau nodejs)
+```
 pkg install git python -y
-
-# Klon repositori PublicEye Anda
-git clone [https://github.com/USERNAME/publiceye-osint.git](https://github.com/USERNAME/publiceye-osint.git)
-cd publiceye-osint
-
-# Jalankan server lokal ringan menggunakan Python
+```
+3. Klon repositori
+```
+git clone https://github.com/123tool/Publiceye-Osint.git
+cd Publiceye-Osint
+```
+3. Jalankan server lokal ringan menggunakan Python
+```
 python -m http.server 8080
+```
+Setelah server berjalan, buka peramban web (Chrome/Brave) di Android Anda dan akses:
+```
+http://localhost:8080
+```
+​
+## Ubuntu / Linux
+​Untuk pengguna distro Linux berbasis Ubuntu atau Debian, Anda bisa menggunakan modul bawaan Python atau memasang Node.js:
+​Opsi A: Menggunakan Python Bawaan
+```
+sudo apt update
+sudo apt install git python3 -y
+cd /path/to/publiceye-osint
+python3 -m http.server 8080
+```
+Opsi B: Menggunakan Node.js (http-server)
+```
+sudo apt update
+sudo apt install nodejs npm -y
+sudo npm install -g http-server
+cd /path/to/publiceye-osint
+http-server -p 8080
+```
+Buka peramban web Anda dan akses :
+```
+http://localhost:8080
+```
+
+## Docker (Advanced Deployment)
+​Jika Anda ingin membungkus platform ini ke dalam kontainer agar mudah disebarkan di server VPS :
+
+## Jalankan container menggunakan image Nginx minimalis langsung dari folder proyek
+```
+docker run --name publiceye-framework -v $(pwd):/usr/share/nginx/html:ro -p 8080:80 -d nginx:alpine
+```
+
+## Konfigurasi API
+
+​Secara bawaan (default), PublicEye bekerja memanfaatkan modul public scraping gratis. Jika Anda memiliki kunci akses premium untuk memperdalam hasil analisis data (seperti Shodan premium atau VirusTotal API), Anda dapat memasukkannya langsung melalui halaman menu Settings & API Keys.
+
+​## Catatan Keamanan :
+
+Semua API Key disimpan dengan aman di dalam localStorage peramban web lokal Anda. Kunci tersebut tidak dikirimkan ke server luar mana pun selain ke titik akhir resmi penyedia API terkait.
+
+​## Disclaimer
+
+Segala bentuk penyalahgunaan alat ini untuk tindakan ofensif di luar hukum atau tanpa izin tertulis dari pemilik target berada di luar tanggung jawab pengembang platform. Gunakan platform ini secara bijak demi tujuan riset keamanan dan forensik digital.

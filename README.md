@@ -1,7 +1,9 @@
 ## PublicEye v3.0 - Open Source Intelligence (OSINT) Platform
+
 ---
 
 **PublicEye** adalah platform intelijen sumber terbuka (OSINT) berbasis web modern yang dirancang untuk analis keamanan, penyelidik siber, dan tim *Blue Team*. Platform ini memungkinkan pengumpulan data secara *real-time* langsung dari sisi klien (*client-side*) memanfaatkan API publik gratis dan protokol asinkronus berkecepatan tinggi tanpa memerlukan infrastruktur backend yang berat.
+
 ---
 
 ## Fitur
@@ -11,6 +13,7 @@
 * **Centralized IOC Vault:** Mengelola indikator ancaman (Domain, IP, SHA256, Email, URL, CVE) yang siap diekspor untuk kebutuhan integrasi SIEM/EDR.
 * **Threat Feeds Aggregator:** Sinkronisasi info intelijen ancaman dari 6 sumber global tepercaya (CISA ICS-CERT, AlienVault OTX, URLhaus, PhishTank, MalwareBazaar, FS-ISAC).
 * **Intelligence Exporter:** Ekspor hasil pemindaian dan temuan intelijen secara instan ke format berkas **JSON** atau **CSV** tanpa keluar dari aplikasi.
+
 ---
 
 ## Modul & API
@@ -22,6 +25,7 @@
 * **Advanced Wayback Inspector:** Pemeriksaan arsip riwayat snapshot situs web masa lalu secara instan melalui integrasi Wayback Machine API (`archive.org`).
 * **CertStream Live Engine:** Pemantauan pendaftaran sertifikat SSL/TLS di seluruh dunia secara *real-time* menggunakan koneksi murni WebSocket (`wss://`).
 * **Username Enumeration Probe:** Metode *HTTP probing* cepat untuk melacak keberadaan profil digital target di berbagai platform pengembang global.
+
 ---
 
 ## Sandbox Framework
@@ -53,23 +57,24 @@ cd Publiceye-Osint
 ```
 python -m http.server 8080
 ```
-Setelah server berjalan, buka peramban web (Chrome/Brave) di Android Anda dan akses:
+5. Setelah server berjalan, buka peramban web (Chrome/Brave) di Android Anda dan akses:
 ```
 http://localhost:8080
 ```
+
 ​---
 
 ## Ubuntu / Linux
 ​Untuk pengguna distro Linux berbasis Ubuntu atau Debian, Anda bisa menggunakan modul bawaan Python atau memasang Node.js :
 
-​Opsi A: Menggunakan Python Bawaan
+​Opsi A : Menggunakan Python Bawaan
 ```
 sudo apt update
 sudo apt install git python3 -y
 cd /path/to/publiceye-osint
 python3 -m http.server 8080
 ```
-Opsi B: Menggunakan Node.js (http-server)
+Opsi B : Menggunakan Node.js (http-server)
 ```
 sudo apt update
 sudo apt install nodejs npm -y
@@ -86,6 +91,7 @@ http://localhost:8080
 ​Jika Anda ingin membungkus platform ini ke dalam kontainer agar mudah disebarkan di server VPS :
 
 Jalankan container menggunakan image Nginx minimalis langsung dari folder proyek
+
 ```
 docker run --name publiceye-framework -v $(pwd):/usr/share/nginx/html:ro -p 8080:80 -d nginx:alpine
 ```
@@ -94,8 +100,8 @@ docker run --name publiceye-framework -v $(pwd):/usr/share/nginx/html:ro -p 8080
 
 ​Secara bawaan (default), PublicEye bekerja memanfaatkan modul public scraping gratis. Jika Anda memiliki kunci akses premium untuk memperdalam hasil analisis data (seperti Shodan premium atau VirusTotal API), Anda dapat memasukkannya langsung melalui halaman menu Settings & API Keys.
 
-​Catatan Keamanan :
+## ​Catatan Keamanan :
 Semua API Key disimpan dengan aman di dalam localStorage peramban web lokal Anda. Kunci tersebut tidak dikirimkan ke server luar mana pun selain ke titik akhir resmi penyedia API terkait.
 
-​Disclaimer :
+## ​Disclaimer :
 Segala bentuk penyalahgunaan alat ini untuk tindakan ofensif di luar hukum atau tanpa izin tertulis dari pemilik target berada di luar tanggung jawab pengembang platform. Gunakan platform ini secara bijak demi tujuan riset keamanan dan forensik digital.

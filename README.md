@@ -6,7 +6,7 @@ Platform ini hadir dengan antarmuka bertema *Cyber-Dark Glassmorphism* yang intu
 
 ---
 
-## Fitur & Modul
+## Fitur
 
 * **Dasbor:** Menampilkan metrik langsung, matriks kemampuan platform, status tingkat ancaman sektoral, dan tindakan cepat (*quick action*).
 * **Manajer Investigasi:** Sistem manajemen kasus (*case registry*) lokal terintegrasi lengkap dengan ID KASUS otomatis, penentuan prioritas ancaman (*Critical/High/Medium*), dan jumlah IOC tertaut.

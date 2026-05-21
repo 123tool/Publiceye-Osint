@@ -32,3 +32,20 @@ Platform ini hadir dengan antarmuka bertema *Cyber-Dark Glassmorphism* yang intu
 
 ---
 
+## Instalasi & Penggunaan
+### 📱 1. Via Termux (Android)
+Untuk menjalankan PublicEye langsung dari ponsel Android Anda, pastikan Anda sudah memasang aplikasi Termux dari F-Droid, lalu jalankan perintah berikut:
+
+```bash
+# Perbarui paket repositori Termux
+pkg update && pkg upgrade -y
+
+# Pasang git dan python (atau nodejs)
+pkg install git python -y
+
+# Klon repositori PublicEye Anda
+git clone [https://github.com/USERNAME/publiceye-osint.git](https://github.com/USERNAME/publiceye-osint.git)
+cd publiceye-osint
+
+# Jalankan server lokal ringan menggunakan Python
+python -m http.server 8080

@@ -99,8 +99,8 @@ docker run --name publiceye-framework -v $(pwd):/usr/share/nginx/html:ro -p 8080
 
 ​Secara bawaan (default), PublicEye bekerja memanfaatkan modul public scraping gratis. Jika Anda memiliki kunci akses premium untuk memperdalam hasil analisis data (seperti Shodan premium atau VirusTotal API), Anda dapat memasukkannya langsung melalui halaman menu Settings & API Keys.
 
-## ​Catatan Keamanan :
+## ​Catatan Keamanan
 Semua API Key disimpan dengan aman di dalam localStorage peramban web lokal Anda. Kunci tersebut tidak dikirimkan ke server luar mana pun selain ke titik akhir resmi penyedia API terkait.
 
-## ​Disclaimer :
+## ​Disclaimer
 Segala bentuk penyalahgunaan alat ini untuk tindakan ofensif di luar hukum atau tanpa izin tertulis dari pemilik target berada di luar tanggung jawab pengembang platform. Gunakan platform ini secara bijak demi tujuan riset keamanan dan forensik digital.

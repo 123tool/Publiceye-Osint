@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PublicEye v3.0 - OSINT Intelligence Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="logo-icon"></div>
+                <h2>PublicEye <span>v3.0</span></h2>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <div class="menu-category">INTELLIGENCE</div>
+                <a href="#dashboard" class="menu-item active" data-target="dashboard">
+                    <i class="fa-solid fa-gauge"></i> Dashboard
+                </a>
+                <a href="#investigations" class="menu-item" data-target="investigations">
+                    <i class="fa-solid fa-folder-open"></i> Investigations <span class="badge badge-orange" id="badge-cases">3</span>
+                </a>
+                <a href="#ioc-manager" class="menu-item" data-target="ioc-manager">
+                    <i class="fa-solid fa-shield-halved"></i> IOC Manager <span class="badge badge-purple" id="badge-iocs">12</span>
+                </a>
+
+                <div class="menu-category">COLLECTION</div>
+                <a href="#domain-recon" class="menu-item" data-target="domain-recon">
+                    <i class="fa-solid fa-globe"></i> Domain Recon
+                </a>
+                <a href="#username-search" class="menu-item" data-target="username-search">
+                    <i class="fa-solid fa-user-ninja"></i> Username Search
+                </a>
+                <a href="#crypto-tracker" class="menu-item" data-target="crypto-tracker">
+                    <i class="fa-brands fa-bitcoin"></i> Crypto Tracker
+                </a>
+
+                <div class="menu-category">SOCIAL & DARK WEB</div>
+                <a href="#tg-darkweb" class="menu-item" data-target="tg-darkweb">
+                    <i class="fa-brands fa-telegram"></i> TG & Dark Web
+                </a>
+                <a href="#social-media-recon" class="menu-item" data-target="social-media-recon">
+                    <i class="fa-solid fa-users"></i> Social Media Recon
+                </a>
+
+                <div class="menu-category">ADVANCED</div>
+                <a href="#google-dorks" class="menu-item" data-target="google-dorks">
+                    <i class="fa-brands fa-google"></i> Google Dorks
+                </a>
+                <a href="#wayback-code" class="menu-item" data-target="wayback-code">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Wayback & Code
+                </a>
+
+                <div class="menu-category">MONITORING</div>
+                <a href="#certstream" class="menu-item" data-target="certstream">
+                    <i class="fa-solid fa-satellite-dish"></i> CertStream <span class="indicator-live">LIVE</span>
+                </a>
+                <a href="#threat-feeds" class="menu-item" data-target="threat-feeds">
+                    <i class="fa-solid fa-rss"></i> Threat Feeds
+                </a>
+
+                <div class="menu-category">MANAGEMENT</div>
+                <a href="#settings" class="menu-item" data-target="settings">
+                    <i class="fa-solid fa-gear"></i> Settings & API Keys
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="page-title"><h1 id="current-view-title">Dashboard</h1></div>
+                <div class="system-status">
+                    <span class="pulse-green"></span> OSINT Intelligence Platform Active
+                </div>
+            </header>
+
+            <div id="view-container" class="view-viewport">
+                </div>
+        </main>
+    </div>
+
+    <script src="js/mock_data.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

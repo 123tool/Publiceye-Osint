@@ -62,9 +62,7 @@ python -m http.server 8080
 http://localhost:8080
 ```
 
-​---
-
-## Ubuntu / Linux
+## 2. Ubuntu / Linux
 ​Untuk pengguna distro Linux berbasis Ubuntu atau Debian, Anda bisa menggunakan modul bawaan Python atau memasang Node.js :
 
 ​Opsi A : Menggunakan Python Bawaan
@@ -87,7 +85,7 @@ Buka peramban web Anda dan akses :
 http://localhost:8080
 ```
 
-## Docker (Advanced Deployment)
+## 3. Docker (Advanced Deployment)
 ​Jika Anda ingin membungkus platform ini ke dalam kontainer agar mudah disebarkan di server VPS :
 
 Jalankan container menggunakan image Nginx minimalis langsung dari folder proyek
@@ -95,6 +93,7 @@ Jalankan container menggunakan image Nginx minimalis langsung dari folder proyek
 ```
 docker run --name publiceye-framework -v $(pwd):/usr/share/nginx/html:ro -p 8080:80 -d nginx:alpine
 ```
+
 
 ## Konfigurasi API
 
